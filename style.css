@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #4f46e5;   /* Original primary */
+    --secondary-color: #0ea5e9; /* Original secondary */
+    --accent-color: #8b5cf6;    /* Original accent */
+    --background-light: #f8fafc;
+    --background-dark: #2e2e2e;
+    --text-light: #2c3e50;
+    --text-dark: #ecf0f1;
+}
+
+.stApp {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #3730a3;   /* Darker version of original primary */
+        --secondary-color: #155e75; /* Darker version of original secondary */
+        --accent-color: #6d28d9;    /* Darker version of original accent */
+    }
+    .stApp {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+}
+
+/* Button styling */
+.stButton > button {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.stButton > button:hover {
+    background: var(--secondary-color);
+}
+
+/* Style headers and sections */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+.stFileUploader, .stSelectbox, .stNumberInput, .stColorPicker, .stRadio {
+    color: var(--text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--accent-color);
+    }
+
+    .stFileUploader, .stSelectbox, .stNumberInput, .stColorPicker, .stRadio {
+        color: var(--text-dark);
+    }
+}
+/* Custom title styling */
+.custom-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #4f46e5; /* Primary color */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom description styling */
+.custom-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.0em;
+    color: #6b63d9; /* Lighter color of the primary color */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
